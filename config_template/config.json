@@ -55,14 +55,14 @@
             "type": "selector",
             "outbounds": [
                 "🎈 自动选择",
-                "[Vless] CF随机节点"
+                "direct"
             ]
         },
         {
             "tag": "🎈 自动选择",
             "type": "urltest",
             "outbounds": [
-                "[Vless] CF随机节点"
+                "direct"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "300s",
@@ -70,19 +70,11 @@
         },
         {
             "tag": "🎯 全球直连",
-            "type": "selector",
-            "outbounds": [
-                "direct",
-                "block"
-            ]
+            "type": "direct"
         },
         {
             "tag": "🛑 全球拦截",
-            "type": "selector",
-            "outbounds": [
-                "block",
-                "direct"
-            ]
+            "type": "block"
         },
         {
             "tag": "🐟 漏网之鱼",
@@ -96,14 +88,16 @@
             "tag": "GLOBAL",
             "type": "selector",
             "outbounds": [
-                "direct",
-                "block",
-                "🚀 节点选择",
-                "🎈 自动选择",
                 "🎯 全球直连",
                 "🛑 全球拦截",
+                "🚀 节点选择",
+                "🎈 自动选择",
                 "🐟 漏网之鱼"
             ]
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
         }
     ],
     "route": {
@@ -145,7 +139,7 @@
             },
             {
                 "clash_mode": "direct",
-                "outbound": "direct"
+                "outbound": "🎯 全球直连"
             },
             {
                 "clash_mode": "global",

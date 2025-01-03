@@ -123,10 +123,13 @@
       "server": "{server}", // 动态服务器地址占位符
       "port": 443,
       "uuid": "{uuid}", // 动态UUID占位符
-      "encryption": "none",
-      "tls": true,
-      "skip-cert-verify": true,
-      "ws-opts": {
+      "tls": {
+        "enabled": true,
+        "server_name": "{host}", // 动态Host占位符
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
         "path": "/?ed=2560",
         "headers": {
           "Host": "{host}" // 动态Host占位符

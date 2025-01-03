@@ -254,24 +254,5 @@
     ],
     "final": "🐟 漏网之鱼",
     "auto_detect_interface": true
-  },
-  "outbound_nodes": [
-    {
-      "tag": "{tag}",
-      "type": "vless",
-      "name": "{name}",
-      "server": "{server}",
-      "port": 443,
-      "uuid": "{uuid}",
-      "encryption": "none",
-      "tls": true,
-      "skip-cert-verify": true,
-      "ws-opts": {
-        "path": "{path}",
-        "headers": {
-          "Host": "{host}"
-        }
-      }
-    }
-  ]
+  }
 }

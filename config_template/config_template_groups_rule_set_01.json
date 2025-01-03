@@ -120,17 +120,16 @@
     {
       "tag": "{name}",
       "type": "vless",
-      "name": "{name}",  // 动态节点名称
-      "server": "[2606:4700:130:0:fb04:ed08:7631:7c45]",
+      "server": "{server}",
       "port": 443,
-      "uuid": "fb110592-aaee-4902-9443-b93872eb9a90",
+      "uuid": "{uuid}",
       "encryption": "none",
       "tls": true,
       "skip-cert-verify": true,
       "ws-opts": {
         "path": "/?ed=2560",
         "headers": {
-          "Host": "r-menghao3.us.kg"
+          "Host": "{host}"
         }
       }
     }

@@ -89,6 +89,10 @@
             "type": "direct"
         },
         {
+            "tag": "block",
+            "type": "block"
+        },
+        {
             "tag": "🐟 漏网之鱼",
             "type": "selector",
             "outbounds": [

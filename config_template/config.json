@@ -70,11 +70,19 @@
         },
         {
             "tag": "🎯 全球直连",
-            "type": "direct"
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "block"
+            ]
         },
         {
             "tag": "🛑 全球拦截",
-            "type": "block"
+            "type": "selector",
+            "outbounds": [
+                "block",
+                "direct"
+            ]
         },
         {
             "tag": "direct",

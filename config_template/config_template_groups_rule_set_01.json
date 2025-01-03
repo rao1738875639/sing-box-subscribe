@@ -116,6 +116,35 @@
         {
             "type": "dns",
             "tag": "dns-out"
+        },
+        {
+            "tag": "CF随机节点",
+            "type": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "[2606:4700:130:0:fb04:ed08:7631:7c45]",
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "fb110592-aaee-4902-9443-b93872eb9a90",
+                                "encryption": "none",
+                                "security": "tls",
+                                "sni": "r-menghao3.us.kg",
+                                "fp": "random",
+                                "allowInsecure": true,
+                                "network": "ws",
+                                "wsSettings": {
+                                    "path": "/?ed=2560",
+                                    "headers": {
+                                        "Host": "r-menghao3.us.kg"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     ],
     "route": {

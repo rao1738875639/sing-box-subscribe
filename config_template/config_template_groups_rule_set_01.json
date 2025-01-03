@@ -51,15 +51,15 @@
     ],
     "outbounds": [
         {
-            "tag": "🚀 节点选择",
+            "tag": "Node Selector",
             "type": "selector",
             "outbounds": [
-                "🎈 自动选择",
+                "Auto Select",
                 "direct"
             ]
         },
         {
-            "tag": "🎈 自动选择",
+            "tag": "Auto Select",
             "type": "urltest",
             "outbounds": [
                 "direct"
@@ -69,7 +69,7 @@
             "tolerance": 150
         },
         {
-            "tag": "🎯 全球直连",
+            "tag": "Global Direct",
             "type": "selector",
             "outbounds": [
                 "direct",
@@ -77,7 +77,7 @@
             ]
         },
         {
-            "tag": "🛑 全球拦截",
+            "tag": "Global Block",
             "type": "selector",
             "outbounds": [
                 "block",
@@ -93,11 +93,11 @@
             "type": "block"
         },
         {
-            "tag": "🐟 漏网之鱼",
+            "tag": "Fish",
             "type": "selector",
             "outbounds": [
-                "🚀 节点选择",
-                "🎯 全球直连"
+                "Node Selector",
+                "Global Direct"
             ]
         },
         {
@@ -106,11 +106,11 @@
             "outbounds": [
                 "direct",
                 "block",
-                "🚀 节点选择",
-                "🎈 自动选择",
-                "🎯 全球直连",
-                "🛑 全球拦截",
-                "🐟 漏网之鱼"
+                "Node Selector",
+                "Auto Select",
+                "Global Direct",
+                "Global Block",
+                "Fish"
             ]
         },
         {
@@ -125,28 +125,28 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "Global Direct"
             },
             {
                 "tag": "GEOIP-CN",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "Global Direct"
             },
             {
                 "tag": "GEOSITE-CN",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "Global Direct"
             },
             {
                 "tag": "GEOLOCATION-!CN",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
-                "download_detour": "🎯 全球直连"
+                "download_detour": "Global Direct"
             }
         ],
         "rules": [
@@ -166,30 +166,30 @@
             {
                 "network": "udp",
                 "port": 443,
-                "outbound": "🛑 全球拦截"
+                "outbound": "Global Block"
             },
             {
                 "rule_set": "CATEGORY-ADS",
-                "outbound": "🛑 全球拦截"
+                "outbound": "Global Block"
             },
             {
                 "ip_is_private": true,
-                "outbound": "🎯 全球直连"
+                "outbound": "Global Direct"
             },
             {
                 "rule_set": "GEOIP-CN",
-                "outbound": "🎯 全球直连"
+                "outbound": "Global Direct"
             },
             {
                 "rule_set": "GEOSITE-CN",
-                "outbound": "🎯 全球直连"
+                "outbound": "Global Direct"
             },
             {
                 "rule_set": "GEOLOCATION-!CN",
-                "outbound": "🚀 节点选择"
+                "outbound": "Node Selector"
             }
         ],
-        "final": "🐟 漏网之鱼",
+        "final": "Fish",
         "auto_detect_interface": true
     },
     "dns": {
@@ -198,23 +198,23 @@
                 "tag": "remote-dns",
                 "address": "tls://8.8.8.8",
                 "address_resolver": "remote-resolver-dns",
-                "detour": "🚀 节点选择"
+                "detour": "Node Selector"
             },
             {
                 "tag": "local-dns",
                 "address": "https://223.5.5.5/dns-query",
                 "address_resolver": "resolver-dns",
-                "detour": "🎯 全球直连"
+                "detour": "Global Direct"
             },
             {
                 "tag": "resolver-dns",
                 "address": "223.5.5.5",
-                "detour": "🎯 全球直连"
+                "detour": "Global Direct"
             },
             {
                 "tag": "remote-resolver-dns",
                 "address": "8.8.8.8",
-                "detour": "🚀 节点选择"
+                "detour": "Node Selector"
             },
             {
                 "tag": "block",

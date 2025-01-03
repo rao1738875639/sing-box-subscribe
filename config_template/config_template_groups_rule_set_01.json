@@ -116,6 +116,22 @@
         {
             "type": "dns",
             "tag": "dns-out"
+        },
+        {
+            "tag": "CF随机节点",
+            "type": "vless",
+            "server": "[2606:4700:130:0:fb04:ed08:7631:7c45]",
+            "port": 443,
+            "uuid": "fb110592-aaee-4902-9443-b93872eb9a90",
+            "encryption": "none",
+            "tls": true,
+            "skip-cert-verify": true,
+            "ws-opts": {
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "r-menghao3.us.kg"
+                }
+            }
         }
     ],
     "route": {

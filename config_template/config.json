@@ -55,14 +55,14 @@
             "type": "selector",
             "outbounds": [
                 "🎈 自动选择",
-                "direct"
+                "[Vless] CF随机节点"
             ]
         },
         {
             "tag": "🎈 自动选择",
             "type": "urltest",
             "outbounds": [
-                "direct"
+                "[Vless] CF随机节点"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "300s",
@@ -104,10 +104,12 @@
             "tag": "GLOBAL",
             "type": "selector",
             "outbounds": [
-                "🎯 全球直连",
-                "🛑 全球拦截",
+                "direct",
+                "block",
                 "🚀 节点选择",
                 "🎈 自动选择",
+                "🎯 全球直连",
+                "🛑 全球拦截",
                 "🐟 漏网之鱼"
             ]
         },
@@ -155,7 +157,7 @@
             },
             {
                 "clash_mode": "direct",
-                "outbound": "🎯 全球直连"
+                "outbound": "direct"
             },
             {
                 "clash_mode": "global",
